@@ -29,3 +29,8 @@ jobs:
       run: |
         cd v1.0.0
         python app.py
+
+    - name: Stop Flask Application
+      run: |
+        pid=$(cat v1.0.0/flask_pid.txt)
+        kill $pid
