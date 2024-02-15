@@ -10,14 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Nr. 1: 
     - name: Checkout Repository
       uses: actions/checkout@v3
 
+      # Nr. 2:
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
         python-version: "3"
 
+      # Nr. 3:
     - name: Install dependencies
       run: |
         cd v1.0.0
@@ -25,12 +28,16 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+      # Nr. 4:
     - name: Start Flask Application
       run: |
         cd v1.0.0
         python app.py &
         echo $! > flask_pid.txt
 
+    # here you can add some other steps e.g. for integration or e2e tests
+
+      # Nr. 5:
     - name: Stop Flask Application
       run: |
         pid=$(cat v1.0.0/flask_pid.txt)
