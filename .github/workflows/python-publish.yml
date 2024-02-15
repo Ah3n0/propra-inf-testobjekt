@@ -20,12 +20,12 @@ jobs:
 
     - name: Install dependencies
       run: |
+        cd /v1.0.0
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      working-directory: /v1.0.0
 
     - name: Start Flask Application
       run: |
+        cd /v1.0.0
         python app.py
-      working-directory: /v1.0.0
