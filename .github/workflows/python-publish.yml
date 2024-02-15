@@ -22,4 +22,4 @@ jobs:
         if [ -f v1.0.0/requirements.txt ]; then pip install -r v1.0.0/requirements.txt; fi
     - name: Start Flask Application
       run: |
-        python app.py
+        python v1.0.0/app.py
