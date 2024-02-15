@@ -20,6 +20,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f v1.0.0/requirements.txt ]; then pip install -r v1.0.0/requirements.txt; fi
+      working-directory: /v1.0.0
     - name: Start Flask Application
       run: |
         python v1.0.0/app.py
+      working-directory: /v1.0.0
