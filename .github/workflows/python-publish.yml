@@ -28,7 +28,8 @@ jobs:
     - name: Start Flask Application
       run: |
         cd v1.0.0
-        python app.py
+        python app.py &
+        echo $! > flask_pid.txt
 
     - name: Stop Flask Application
       run: |
