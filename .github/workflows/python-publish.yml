@@ -31,7 +31,7 @@ jobs:
     - name: Run Unittest
       run: |
         cd v1.0.0
-        python -m tests/unittests/app_tests.py 
+        python -m tests/unittests/
       
       # Nr. 4:
     - name: Start Flask Application
