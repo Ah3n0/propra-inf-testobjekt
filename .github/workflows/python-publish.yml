@@ -32,6 +32,12 @@ jobs:
       run: |
         cd v1.0.0
         python tests/unittests/app_tests.py
+        
+    - name: Create Coverage Report
+      run: |
+        cd v1.0.0/tests/unittests
+        coverage run -m unittest discover
+        coverage report
       
       # Nr. 4:
     - name: Start Flask Application
@@ -39,14 +45,6 @@ jobs:
         cd v1.0.0
         python app.py &
         echo $! > flask_pid.txt
-        
-
-      # Nr. 5:
-    - name: Upload Coverage Report
-      run: |
-        cd v1.0.0
-        coverage run --branch -m unittest discover
-        coverage report
 
       # Nr. 6:
     - name: Stop Flask Application
