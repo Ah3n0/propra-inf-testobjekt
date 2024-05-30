@@ -31,7 +31,7 @@ jobs:
     - name: Run Unittest
       run: |
         cd v1.0.0
-        python tests/unittests/app_tests.py
+        python tests/unittests/test_app.py
         
     - name: Create Coverage Report
       run: |
