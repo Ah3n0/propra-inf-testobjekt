@@ -39,10 +39,16 @@ jobs:
         cd v1.0.0
         python app.py &
         echo $! > flask_pid.txt
-
-    # here you can add some other steps e.g. for integration or e2e tests
+        
 
       # Nr. 5:
+    - name: Upload Coverage Report
+      run: |
+        cd v1.0.0
+        coverage run --branch -m unittest discover
+        coverage report
+
+      # Nr. 6:
     - name: Stop Flask Application
       run: |
         pid=$(cat v1.0.0/flask_pid.txt)
