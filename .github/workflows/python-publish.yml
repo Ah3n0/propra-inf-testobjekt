@@ -28,10 +28,10 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Run Unittest
+    - name: Run Pytests
       run: |
         cd v1.0.0
-        python tests/pytest/app_tests.py
+        python tests/pytests/app_tests.py
         
     - name: Create Coverage Report
       run: |
