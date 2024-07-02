@@ -31,12 +31,12 @@ jobs:
     - name: Run Unittest
       run: |
         cd v1.0.0
-        python tests/unittests/app_tests.py
+        python tests/pytest/app_tests.py
         
     - name: Create Coverage Report
       run: |
         cd v1.0.0
-        coverage run -m unittest discover -s tests/unittests -p '*_tests.py'
+        coverage run -m pytest discover -s tests/unittests -p '*_tests.py'
         coverage report
         coverage xml -o coverage.xml
         
