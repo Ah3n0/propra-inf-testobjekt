@@ -27,13 +27,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-    - name: Führe Flake8-Linting durch
-      run: |
-        cd v1.0.0
-        flake8 .
-      continue-on-error: true
-      
     - name: Run Pytests
       run: |
         cd v1.0.0
@@ -60,7 +53,6 @@ jobs:
         cd v1.0.0
         python app.py &
         echo $! > flask_pid.txt
-
       # Nr. 6:
     - name: Stop Flask Application
       run: |
