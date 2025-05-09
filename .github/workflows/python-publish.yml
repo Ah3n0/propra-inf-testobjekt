@@ -18,7 +18,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
-        python-version: "3"
+        python-version: "3.11"
 
       # Nr. 3:
     - name: Install dependencies
@@ -34,25 +34,25 @@ jobs:
         flake8 .
       continue-on-error: true
       
-    #- name: Run Pytests
-    #  run: |
-    #    cd v1.0.0
-    #    python tests/pytests/app_tests.py
+    - name: Run Pytests
+      run: |
+        cd v1.0.0
+        python tests/pytests/app_tests.py
         
-    #- name: Create Coverage Report
-    #  run: |
-    #    cd v1.0.0
-    #    # coverage run -m pytest discover -s tests/unittests -p '*_tests.py'
-    #    coverage run -m pytest tests/pytests/app_tests.py
-    #    coverage report
-    #    coverage xml -o coverage.xml
+    - name: Create Coverage Report
+      run: |
+        cd v1.0.0
+        # coverage run -m pytest discover -s tests/unittests -p '*_tests.py'
+        coverage run -m pytest tests/pytests/app_tests.py
+        coverage report
+        coverage xml -o coverage.xml
         
       # Nr. 5: Upload Coverage Report
-    #- name: Upload Coverage Report
-    #  uses: actions/upload-artifact@v2
-    #  with:
-    #    name: coverage-report
-    #    path: v1.0.0/coverage.xml
+    - name: Upload Coverage Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage-report
+        path: v1.0.0/coverage.xml
       
       # Nr. 4:
     - name: Start Flask Application
