@@ -134,4 +134,4 @@ Falls Sie auf unerwartete Probleme oder Fehler in der Anwendung stoßen – abge
 
 Bitte beschreiben Sie das Problem so detailliert wie möglich, inklusive der Schritte, die zu dem Fehler geführt haben, sowie alle relevanten Informationen, die uns helfen könnten, das Problem zu reproduzieren und zu beheben. Jedes Issue wird sorgfältig geprüft und, falls notwendig, in den Entwicklungsprozess integriert, um eine schnelle und effektive Lösung zu gewährleisten. (Sollten Sie unsicher sein, wie ein Issue / Defect formuliert wird, nutzen Sie doch die Gelegenheit das daszu im ProPra umgestezte Thema kennenzulernen.)
 
-Ihr Engagement und Ihre Unterstützung sind essentiell für die Qualität und Zuverlässigkeit des Testobjekts. Wir schätzen jede Form von Feedback und freuen uns auf Ihre aktive Beteiligung an unserem Projekt.
+Ihr Engagement und Ihre Unterstützung sind essentiell für die Qualität und Zuverlässigkeit des Testobjekts. Wir schätzen jede Form von Feedback und freuen uns auf Ihre aktive Beteiligung an unserem Projekt. 
