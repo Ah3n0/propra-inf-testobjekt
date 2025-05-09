@@ -42,7 +42,7 @@ jobs:
       run: |
         cd v1.0.0
         # coverage run -m pytest discover -s tests/unittests -p '*_tests.py'
-        coverage run -m pytest discover -s tests/pytests -p '*_tests.py'
+        coverage run -m pytest tests/pytests/app_tests.py
         coverage report
         coverage xml -o coverage.xml
         
