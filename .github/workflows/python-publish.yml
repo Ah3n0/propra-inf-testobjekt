@@ -18,7 +18,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
-        python-version: "3"
+        python-version: "3.11"
 
       # Nr. 3:
     - name: Install dependencies
@@ -48,7 +48,7 @@ jobs:
         
       # Nr. 5: Upload Coverage Report
     - name: Upload Coverage Report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: coverage-report
         path: './v1.0.0/coverage.xml'
